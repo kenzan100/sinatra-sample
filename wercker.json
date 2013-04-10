@@ -1,0 +1,6 @@
+{
+    "custom steps" :
+    {
+        "rake" : ["bundle exec rake"]
+    }
+}
