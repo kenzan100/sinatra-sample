@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'json'
 
-get '/sushi.json' do
+get '/cities.json' do
       content_type :json
-        return {:sushi => ["Maguro", "Hamachi", "Uni", "Saba", "Ebi", "Sake", "Tai"]}.to_json
+        return {:cities=> ["Amsterdam", "San Francisco", "Berlin", "New York", "Tokyo"]}.to_json
 end
