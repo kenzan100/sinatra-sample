@@ -6,3 +6,12 @@ build:
         name: rake
         code: bundle exec rake
     - bundle-package
+deploy:
+  steps:
+    - bundle-install
+    - script:
+        name: write env var
+        code: |-
+          export CAP_PRIVATE_KEY=`mktemp`
+          echo -e $WERCKER_CAP_PRIVATE_KEY > $CAP_PRIVATE_KEY
+    - cap
