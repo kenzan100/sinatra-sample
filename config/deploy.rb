@@ -1,3 +1,5 @@
+require 'bundler/capistrano'
+
 set :application, "sinatra-sample"
 server "switchboard.wercker.com", :app, :web
 set :user, "ubuntu"
@@ -9,4 +11,3 @@ set :scm, :none
 set :deploy_via, :copy
 
 ssh_options[:keys] = [ENV["CAP_PRIVATE_KEY"]]
-
