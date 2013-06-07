@@ -1,5 +1,5 @@
 set :application, "sinatra-sample"
-server “example.com", :app, :web
+server "example.com", :app, :web
 set :user, "ubuntu"
 set :group, "ubuntu"
 set :use_sudo, false
